@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style>
+body {
+  font-family: 'Montserrat', sans-serif;
+
+  margin: 0 auto;
+  max-width: 600px;
+  background: #200034;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+  width: 600px;
+}
+h1 {
+  font-family: 'Faster One', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: rgba(150, 0, 0, 1);
+  margin: 60px 0 0 0;
+}
+h2 {
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  color: rgba(7, 56, 777, 1);
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(250,0,75,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(250,0,75,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+ul {
+  padding: 10px;
+  background: rgba(17,0,67,0.5);
+  text-align: center
+  }
+
+button:hover{
+  background: #990000;
+  color: white;
+}
+button {
+  font-size: 20px;
+  padding: 0 10px 0 10px;
+}
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Jariful's restaurant</h1>
+<h2>A Halal New York City eatery</h2>
+
+   <ul>
+      <li><button onclick=Starters()>Starters</button></li>
+      <li><button onclick=Mains()>Mains</button></li>
+      <li><button onclick=Dessert()>Dessert</button></li>
+    </ul>
+
+<div id="me"> </div>
+
+
+<script>
+
+  StartersImages =[
+    'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHuVqOGMQADS5TQJnwmPBczIscmXXTKuIUYsSzgouljBmqJzSrgQ")',
+  'url("https://www.merriam-webster.com/assets/mw/images/article/art-global-footer-recirc/gyro-3456-05c39fc21e4881788326c7d3df029cb4@1x.jpg")',
+  'url("https://www.africanbites.com/wp-content/uploads/2018/10/IMG_9223.jpg")',
+  ]
+  
+  StartersDivs =[
+    '<div class="item"><p>Fuchka<span class="price">$4</span><br /><small>It consists of a round, hollow puri, fried crisp and filled with a mixture of flavored water (commonly known as imli pani), tamarind chutney, chili, chaat masala, potato, onion or chickpeas.</small></p></div>',
+    '<div class="item"><p>Gyro<span class="price">$7</span><br /><small>A gyro or gyros is a Greek dish made from meat cooked on a vertical rotisserie. Like the related dishes shawarma and tacos al pastor, it is derived from the doner kebab.</small></p></div>', 
+    '<div class="item"><p>Samosa<span class="price">$2</span><br /><small>The samosa is made with all-purpose flour locally known as maida shell stuffed with some filling, generally a mixture of mashed boiled potato, onions, green peas, lentils, spices and green chili, or fruits. </small></p></div>',
+    ]
+    
+  MainsImages = [
+  'url("https://www.indianhealthyrecipes.com/wp-content/uploads/2016/05/hyderabadi-mutton-biryani-recipe.jpg")',
+  'url("https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma.jpg")',
+  'url("https://www.yummytummyaarthi.com/wp-content/uploads/2018/02/1-15.jpg)',
+  ]
+  
+  MainsDivs = [
+    '<div class="item"><p>Biryani<span class="price">$8</span><br /><small>Long-grained rice (like basmati) flavored with exotic spices, such as saffron, is layered with lamb, chicken, fish, or vegetables, and a thick gravy.</small></p></div>', 
+    '<div class="item"><p>Chicken Korma<span class="price">$8</span><br /><small>Creamy, spiced Chicken Korma is the stuff dreams are made of. Loosen up those pants and make this delectable Indian dish at home! Drizzle the chicken with the oil and sprinkle on the garam masala, curry powder, salt and pepper.</small></p></div>', 
+    '<div class="item"><p>Pulao<span class="price">$8</span><br /><small>TPulao is a simple recipe where rice and vegetables are sauteed together and then boiled or pressure cooked with water till the rice is fragrant, fluffy and cooked through. </small></p></div>',
+    ]
+    
+  DessertImages = [
+  'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPR6-_qj9SZ4OExHhc3JhT7-anMX36DYxP_CLCiIJTn59ki_R-Xw")',
+  'url("http://2.bp.blogspot.com/-GS9WrgsY4Ic/UlcdBYtuJsI/AAAAAAAAE3M/9FE0PSxhETk/s1600/DSC_0672.JPG")',
+  'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMqaaNPwsAbNH5nRHZ2dd535uS-P8XsNy1DbS3-AnblCNttFQR")',
+  ]
+  
+  DessertDivs = [
+    '<div class="item"><p>Jelabi<span class="price">$3</span><br /><small>Jalebi is a hot favourite on any special occasion be it a birthday, wedding or festival. Jalebis are Indian desserts made by deep-frying a wheat flour (maida flour) batter in pretzel or circular shapes, which are then soaked in sugar syrup. They can be served warm or cold as well.</small></p></div>',
+    '<div class="item"><p>Rasmalai<span class="price">$10</span><br /><small>Rasmalai is a Bengali dessert consisting of soft paneer balls immersed in chilled creamy milk. Like Rasgullas, Rasmalai is also made with homemade cheese known as “paneer” or “chana”. Instead of being soaked in sugar syrup like Rasgullas, Rasmalai is soaked in sweet, flavoured milk.</small></p></div>', 
+    '<div class="item"><p>Gulab Jamun<span class="price">$2</span><br /><small>Homemade gulab jamun is usually made up of powdered milk, a pinch of all-purpose flour (optional), baking powder and clarified butter (ghee); kneaded to form a dough, moulded into balls, deep fried and dropped into simmering sugar syrup.</small></p></div>',
+    ]
+
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  
+  function Starters() {
+	  starters = document.getElementById("me")
+	  starters.innerHTML = "" 
+	  starters.innerHTML += StartersDivs[0]
+    starters.innerHTML += StartersDivs[1]
+    starters.innerHTML += StartersDivs[2]
+	   //alert("Clicked")
+	  items = document.getElementsByClassName("item")
+    items[0].style.background = StartersImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = StartersImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = StartersImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+  }
+    
+  function Mains() {
+     mains = document.getElementById("me")
+	   mains.innerHTML = "" 
+	   mains.innerHTML += MainsDivs[0]
+     mains.innerHTML += MainsDivs[1]
+     mains.innerHTML += MainsDivs[2]
+	  //alert("Clicked")
+	   items = document.getElementsByClassName("item")
+	   for (i=0; i<3; i=i+1) {
+		  items[i].style.background = MainsImages[i]
+		  items[i].style.backgroundSize = '100% 100%'
+    }  
+  }
+  
+  function Dessert() {
+    dessert = document.getElementById("me")
+	  dessert.innerHTML = "" 
+	  dessert.innerHTML += DessertDivs[0]
+    dessert.innerHTML += DessertDivs[1]
+    dessert.innerHTML += DessertDivs[2]
+	  //alert("Clicked")
+	  items = document.getElementsByClassName("item")
+	  for (i=0; i<3; i=i+1) {
+		  items[i].style.background = DessertImages[i]
+		  items[i].style.backgroundSize = '100% 100%'
+    }  
+  } 
+</script>
+
+</body>
