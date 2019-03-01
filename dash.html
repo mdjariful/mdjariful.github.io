@@ -20,6 +20,7 @@ div {
   margin: 40px 0 0 0;
   border-radius: 12px;
   max-width: 600px;
+  height: 350px;
 }
 h1 {
   font-family: 'Faster One', cursive;
@@ -118,6 +119,7 @@ li {
       <li><button onclick=Starters()>Starters</button></li>
       <li><button onclick=Mains()>Mains</button></li>
       <li><button onclick=Dessert()>Dessert</button></li>
+	  <li><button onclick=Drinks()>Drinks</button></li>
     </ul>
 
 <div id="me"> </div>
@@ -129,37 +131,55 @@ li {
     'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHuVqOGMQADS5TQJnwmPBczIscmXXTKuIUYsSzgouljBmqJzSrgQ")',
   'url("https://www.merriam-webster.com/assets/mw/images/article/art-global-footer-recirc/gyro-3456-05c39fc21e4881788326c7d3df029cb4@1x.jpg")',
   'url("https://www.africanbites.com/wp-content/uploads/2018/10/IMG_9223.jpg")',
+'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS57nP83RIVVCUinGS8clzCruOS4pjZfFK7TRYpbsscotiaCcU1)',
   ]
   
   StartersDivs =[
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Fuchka<span class="price">$4</span><br /><small>It consists of a round, hollow puri, fried crisp and filled with a mixture of flavored water (commonly known as imli pani), tamarind chutney, chili, chaat masala, potato, onion or chickpeas.</small></p></div>',
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Gyro<span class="price">$7</span><br /><small>A gyro or gyros is a Greek dish made from meat cooked on a vertical rotisserie. Like the related dishes shawarma and tacos al pastor, it is derived from the doner kebab.</small></p></div>', 
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Samosa<span class="price">$2</span><br /><small>The samosa is made with all-purpose flour locally known as maida shell stuffed with some filling, generally a mixture of mashed boiled potato, onions, green peas, lentils, spices and green chili, or fruits. </small></p></div>',
+	  '<div class="item" onclick=this.classList.toggle("show-description")><p>Spring Roll<span class="price">$2</span><br /><small>A spring roll is a Chinese food consisting of a small roll of thin pastry filled with vegetables and sometimes meat, and then fried. </small></p></div>',
     ]
     
   MainsImages = [
   'url("https://www.indianhealthyrecipes.com/wp-content/uploads/2016/05/hyderabadi-mutton-biryani-recipe.jpg")',
   'url("https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma.jpg")',
   'url("https://www.yummytummyaarthi.com/wp-content/uploads/2018/02/1-15.jpg)',
+  'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPGhajlbEC12wV9KZJK4dNH-XYaEvG_b4e4z4j-WbPiUbqLmXQYg")',
+  'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90J24kp3weTWs89_XZR0v7ntK_gOx10l7oRDOmdiZ8iC5A6nTDA")',
+  
   ]
   
   MainsDivs = [
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Biryani<span class="price">$8</span><br /><small>Long-grained rice (like basmati) flavored with exotic spices, such as saffron, is layered with lamb, chicken, fish, or vegetables, and a thick gravy.</small></p></div>', 
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Chicken Korma<span class="price">$8</span><br /><small>Creamy, spiced Chicken Korma is the stuff dreams are made of. Loosen up those pants and make this delectable Indian dish at home! Drizzle the chicken with the oil and sprinkle on the garam masala, curry powder, salt and pepper.</small></p></div>', 
-    '<div class="item" onclick=this.classList.toggle("show-description")><p>Pulao<span class="price">$8</span><br /><small>TPulao is a simple recipe where rice and vegetables are sauteed together and then boiled or pressure cooked with water till the rice is fragrant, fluffy and cooked through. </small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Pulao<span class="price">$8</span><br /><small>Pulao is a simple recipe where rice and vegetables are sauteed together and then boiled or pressure cooked with water till the rice is fragrant, fluffy and cooked through. </small></p></div>',
+	  '<div class="item" onclick=this.classList.toggle("show-description")><p>Hilsha Fish<span class="price">$8</span><br /><small>A great accompaniment with steamed rice, Hilsa Curry (commonly named as Ilish Macher Jhol/Jhaal in Bengali) is an extremely delicious and spicy fish recipe</small></p></div>',
+	  '<div class="item" onclick=this.classList.toggle("show-description")><p>Nihari<span class="price">$8</span><br /><small>Nihari is a stew from the Indian subcontinent consisting of slow-cooked meat mainly shank meat of beef or lamb and mutton, goat meat and chicken, along with bone marrow.</small></p></div>',
     ]
     
   DessertImages = [
   'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPR6-_qj9SZ4OExHhc3JhT7-anMX36DYxP_CLCiIJTn59ki_R-Xw")',
   'url("http://2.bp.blogspot.com/-GS9WrgsY4Ic/UlcdBYtuJsI/AAAAAAAAE3M/9FE0PSxhETk/s1600/DSC_0672.JPG")',
   'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMqaaNPwsAbNH5nRHZ2dd535uS-P8XsNy1DbS3-AnblCNttFQR")',
+  'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcV9_YdF4mRkGlja4KOijPbh8DIaMu9MsVUu4tk6qUGfj1cgQN5Q")',
   ]
   
   DessertDivs = [
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Jelabi<span class="price">$3</span><br /><small>Jalebi is a hot favourite on any special occasion be it a birthday, wedding or festival. Jalebis are Indian desserts made by deep-frying a wheat flour (maida flour) batter in pretzel or circular shapes, which are then soaked in sugar syrup. They can be served warm or cold as well.</small></p></div>',
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Rasmalai<span class="price">$10</span><br /><small>Rasmalai is a Bengali dessert consisting of soft paneer balls immersed in chilled creamy milk. Like Rasgullas, Rasmalai is also made with homemade cheese known as “paneer” or “chana”. Instead of being soaked in sugar syrup like Rasgullas, Rasmalai is soaked in sweet, flavoured milk.</small></p></div>', 
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Gulab Jamun<span class="price">$2</span><br /><small>Homemade gulab jamun is usually made up of powdered milk, a pinch of all-purpose flour (optional), baking powder and clarified butter (ghee); kneaded to form a dough, moulded into balls, deep fried and dropped into simmering sugar syrup.</small></p></div>',
+	  '<div class="item" onclick=this.classList.toggle("show-description")><p>Pitha<span class="price">$2</span><br /><small>Pithas are primarily made from a batter of rice flour or wheat flour, which is shaped and optionally filled with sweet or savory ingredients. ... Sweet pithas typically contain sugar, jaggery, date juice, or palm syrup, and can be filled with grated coconut, cashews, pistachios, sweetened vegetables, or fruits .</small></p></div>',
     ]
+  DrinksImages =[
+      'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaSl7hC3H2fBnIABInAetJqr87aSzew9D05YA6-XWarqwYsRP")',
+    'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIF7GQXwrTaZ65-TdyIyJYOmYsOrBTLy3v7IyrOx-URRx3aD7UtA")',
+    ]
+  
+  DrinksDivs =[
+      '<div class="item" onclick=this.classList.toggle("show-description")><p>Mint lemon<span class="price">$4</span><br /><small> Mint lemonade is refreshing, tasty and perfect for summer parties. This summer drink is made with fresh lemon juice and fresh mint and only takes minutes to make. ... It is the best herb to put in various summer drinks from cocktails.</small></p></div>',
+      '<div class="item" onclick=this.classList.toggle("show-description")><p>Mango Lassi<span class="price">$7</span><br /><small>A favorite drink at Indian restaurants,it is easy to make at home. Lassis come in all kinds of flavors, some are salty, some are sweet, some have mint, some have fruit. A mango lassi is basically a yogurt based mango milkshake or smoothie. You can use either canned mango pulp or cubed fresh or frozen mango.</small></p></div>', 
+      ]
 
   $('div').on('click', function() {
       $(this).toggleClass('show-description');
@@ -171,6 +191,7 @@ li {
 	  starters.innerHTML += StartersDivs[0]
     starters.innerHTML += StartersDivs[1]
     starters.innerHTML += StartersDivs[2]
+	starters.innerHTML += StartersDivs[3]
 	   //alert("Clicked")
 	  items = document.getElementsByClassName("item")
     items[0].style.background = StartersImages[0]
@@ -179,6 +200,8 @@ li {
     items[1].style.backgroundSize = '100% 100%'
     items[2].style.background = StartersImages[2]
     items[2].style.backgroundSize = '100% 100%'
+    items[3].style.background = StartersImages[3]
+    items[3].style.backgroundSize = '100% 100%'
   }
     
   function Mains() {
@@ -187,9 +210,11 @@ li {
 	   mains.innerHTML += MainsDivs[0]
      mains.innerHTML += MainsDivs[1]
      mains.innerHTML += MainsDivs[2]
+	 mains.innerHTML += MainsDivs[3]
+	 mains.innerHTML += MainsDivs[4]
 	  //alert("Clicked")
 	   items = document.getElementsByClassName("item")
-	   for (i=0; i<3; i=i+1) {
+	   for (i=0; i<5; i=i+1) {
 		  items[i].style.background = MainsImages[i]
 		  items[i].style.backgroundSize = '100% 100%'
     }  
@@ -201,11 +226,27 @@ li {
 	  dessert.innerHTML += DessertDivs[0]
     dessert.innerHTML += DessertDivs[1]
     dessert.innerHTML += DessertDivs[2]
+	dessert.innerHTML += DessertDivs[3]
 	  //alert("Clicked")
 	  items = document.getElementsByClassName("item")
-	  for (i=0; i<3; i=i+1) {
+	  for (i=0; i<4; i=i+1) {
 		  items[i].style.background = DessertImages[i]
 		  items[i].style.backgroundSize = '100% 100%'
+	  }
+  }
+  
+   function Drinks() {
+     drink = document.getElementById("me")
+ 	   drink.innerHTML = "" 
+ 	   drink.innerHTML += DrinksDivs[0]
+     drink.innerHTML += DrinksDivs[1]
+ 	  //alert("Clicked")
+ 	  items = document.getElementsByClassName("item")
+ 	  for (i=0; i<2; i=i+1) {
+ 		  items[i].style.background = DrinksImages[i]
+ 		  items[i].style.backgroundSize = '100% 100%'
+		    
+
     }  
   }
 	
