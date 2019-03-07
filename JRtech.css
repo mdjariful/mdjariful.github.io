@@ -138,8 +138,8 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/hero-bg.jpg) top center;
-  background-size: cover;
+  background: url('https://www.freewebheaders.com/wordpress/wp-content/gallery/high-tech-designs/hi-tech-concepts-on-blue-background-header.jpg') top center;
+  background-size: 100% 100%;
   position: relative;
 }
 
@@ -502,7 +502,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-container .background {
   min-height: 300px;
-  background: url(../img/about-img.jpg) center top no-repeat;
+  background: url('https://fortunedotcom.files.wordpress.com/2018/01/zillow-group-best-workplaces-tech-2018.jpg') center top no-repeat;
+  background-size: 100% 100%;
   margin-bottom: 10px;
 }
 
