@@ -512,11 +512,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-container .background {
   min-height: 300px;
-  background: url('https://healthworksergo.com/wp-content/uploads/2017/10/Young-workers-technology-office.jpg') center top no-repeat;
   background-size: 100% 100%;
   margin-bottom: 10px;
 }
-
+#about .about-container img{
+	max-width: 99%;
+	max-height: 99%;
+}
 #about .about-container .content {
   background: #F0F0D6;
 }
