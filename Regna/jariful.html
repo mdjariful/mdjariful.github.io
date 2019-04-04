@@ -110,7 +110,7 @@
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-              <div class="icon"><i class="fas fa-pencil-alt"></i></div>
+              <div class="icon"><i class="fas fa-pencil-alt" ></i></div>
               <h4 class="title"><a href="">Design</a></h4>
               <p class="description">Our developers do not only develop websites but the design it to with various web designing languages like Cascading Style Sheets and PHP.</p>
             </div>
@@ -130,8 +130,15 @@
           </div>
 
           <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight">
-			  <img src="https://healthworksergo.com/wp-content/uploads/2017/10/Young-workers-technology-office.jpg" onclick=Works()>
-		  			<div class="item"><div>
+			  <img src="https://healthworksergo.com/wp-content/uploads/2017/10/Young-workers-technology-office.jpg" onclick=Works(0)>
+		  			<div class="item"></div>
+			  <img class=" secondi" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNGFWrypJVQLgaMGTIMrSWR57T5t2gV8f1S6tP75hCP347VhWabw" onclick=Works(1)>
+		  			<div class="item"></div>
+			  <img class=" secondi" src="https://www.phreedom.com/wp-content/uploads/2018/01/NetworkManagement.jpg" onclick=Works(2)>
+		  			<div class="item"></div>
+			  <img class=" secondi" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEn73EdqccLnx8yToPSVyZJSdNEh2Ly04Rqe6VMbxubWaBTwePdg" onclick=Works(3)>
+		  			<div class="item"></div>
+			  
 		  </div>
 
         </div>
@@ -150,21 +157,26 @@
         </div>
         <div class="row counters">
 
-  				<div class="col-lg-4 col-6 text-center">
+  				<div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">165</span>
             <p>Clients</p>
   				</div>
 
-          <div class="col-lg-4 col-6 text-center">
+          <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">300</span>
             <p>Projects</p>
   				</div>
 
-          <div class="col-lg-4 col-6 text-center">
+          <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">2300</span>
             <p>Hours Of Support</p>
   				</div>
-
+				<div class="col-lg-3 col-6 text-center">
+	  			  <img class=" factsim" src="http://www.lvi-info.fi/wp-content/uploads/2017/05/tuotetietojen-tila.jpg" style="width:80%" onclick=Works(4)>
+	  		  			<div class="item"></div>
+              
+				</div>
+		  
   			</div>
 
       </div>
@@ -317,7 +329,7 @@
                   <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-center"><button type="submit">Send Message </button></div>
               </form>
             </div>
           </div>
@@ -374,12 +386,21 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script>
+	  Work=[
+	  	"Our Workspace in one of our location.",
+		"Our Servives work for any screen size.",
+		"Our Data services include cloud memory too.",
+		"Meet Jeff, a JRTech Graphic Designer. ",
+		"Other Statistics",
+	  ]
 	  items = document.getElementsByClassName("item")
 
 
-	  function Works(){
+	  function Works(x){
 	  	//alert("Members")
-		items[0].innerHTML = "meber"
+		  if ( items[x].innerHTML == "")
+			  {items[x].innerHTML = Work[x]}
+		  else { items[x].innerHTML ="" }
 	  }
 	  
   </script>
