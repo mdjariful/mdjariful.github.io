@@ -587,6 +587,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 24px;
   font-size: 14px;
 }
+#about .about-container  img{
+	width: 450px;
+	padding: 10px;
+}
 
 /* Facts Section
 --------------------------------*/
@@ -609,6 +613,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0 0 20px 0;
   font-family: 'Share Tech', sans-serif;
   font-size: 14px;
+}
+#facts .factsim img{
+	width :150px;
+	height: 150px;
 }
 
 /* Services Section
