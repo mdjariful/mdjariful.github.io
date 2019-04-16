@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<head>
+  <title>Jariful Chowdhury</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("https://i.dailymail.co.uk/i/pix/2015/08/08/10/2B32408300000578-0-image-a-52_1439027657686.jpg");
+      background-size: cover;
+      background-position: center;
+      color: rgba(190, 260 , 75, 1);
+      font-family: 'Montserrat', sans-serif;
+    }
+    p {
+      font-size: 22px;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+      background: #454545
+    }
+    input[type="submit"] {
+      background: blue;
+      color: white;
+    }
+    img{
+      width: 250px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/26d99471-040a-4d16-9549-735eb387f92d/dacff0z-5d39919b-bf09-4fc0-8615-6a0297c9b639.png/v1/fill/w_699,h_1143,strp/lionel_messi_png_topaz_by_beastieblake_dacff0z-pre.png">
+  <p id="barca"></p>
+  <input id="new" >
+  <input type="submit" onclick="submit()">
+  
+  <script>
+  big= document.getElementById("barca")
+  prompts= {
+    option:"Home Match or Away Match",
+    opted:"Grandstand or Cruyff",
+    opted2:"Premium or Standard",
+    place:"Lower or Upper",
+    seat:"Inside or Outside",
+    bernebeu:"Front View or lower View",
+    Premium:"Inside or Outside",
+  }
+  messi = document.getElementById("new")
+  function submit() {
+    if (messi.value == "home") {
+      //alert("Wrong Option")
+      barca.innerHTML = prompts.opted
+   }
+    else if (messi.value == "away") {
+      //alert("Wrong Option")
+      barca.innerHTML = prompts.opted2
+   }
+    if (messi.value == "grandstand") {
+      //alert("Wrong Option")
+      barca.innerHTML = prompts.place
+   }
+   else if (messi.value == "cruyff") {
+      //alert("Wrong Option")
+      barca.innerHTML = prompts.seat
+   }
+   if (messi.value == "premium") {
+      //alert("Wrong Option")
+      barca.innerHTML = prompts.Premium
+   }
+    else if (messi.value == "standard") {
+      //alert("Wrong Option")
+      barca.innerHTML = prompts.bernebeu
+   }
+  }
+  big.innerHTML = prompts.option
+  
+  </script>
+</body>
