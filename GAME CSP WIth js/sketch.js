@@ -141,19 +141,26 @@ function draw() {
   y3.push.apply(y3, [210])
   direction.push.apply(direction, [1])
   direction_1.push.apply(direction_1, [1])
-  
-  if (keyIsDown(LEFT_ARROW)) {
-    x = x - 7
+  if (touches.length == 0)   {
+
+	  if (keyIsDown(LEFT_ARROW)) {
+	    x = x - 7
+	  }
+	  if (keyIsDown(RIGHT_ARROW)) {
+	    x = x + 7
+	  }
+	  if (keyIsDown(UP_ARROW)) {
+	    y = y - 7
+	  }
+	  if (keyIsDown(DOWN_ARROW)) {
+	    y = y + 7
+	  }
   }
-  if (keyIsDown(RIGHT_ARROW)) {
-    x = x + 7
-  }
-  if (keyIsDown(UP_ARROW)) {
-    y = y - 7
-  }
-  if (keyIsDown(DOWN_ARROW)) {
-    y = y + 7
-  }
+	  else { 
+		x = touches[0].x
+		y = touches[0].y
+}
+
   fill(0,0,0)
   textSize(30);
   text("Score: " + score, 10, 30);
