@@ -210,3 +210,16 @@ function generate_leaderboard() {
   }
 }
 
+function generate_alltime_leaderboard() {
+	let alltime_leaderboard = { }
+	database.ref().orderByValue().limitToLast(3).on("value", function(snapshot) {
+		snapshot.forEach(function(data) {
+		alltime_leaderboard[data.key] = data.val()
+		});
+    	});
+	if (Object.values(alltime_leaderboard).length > 0) {
+	  alert("All-time leaderboard: " + JSON.stringify(alltime_leaderboard,null,1))
+    	}
+}
+
+generate_alltime_leaderboard()
