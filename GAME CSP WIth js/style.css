@@ -9,3 +9,6 @@ html, body {
 canvas {
   display: block;
 }
+#userinput input, button {
+	font-size: 120%;
+}
